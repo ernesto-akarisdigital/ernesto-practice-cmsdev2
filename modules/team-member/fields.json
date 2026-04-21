@@ -1,0 +1,19 @@
+[
+  {
+    "label": "Name",
+    "name": "name",
+    "type": "richtext",
+    "default":"Member name"
+  },
+  {
+    "label": "Position",
+    "name": "position",
+    "type": "richtext",
+    "default":"Member position"
+  },
+  {
+    "label": "Image",
+    "name": "image",
+    "type": "image"
+  }
+]

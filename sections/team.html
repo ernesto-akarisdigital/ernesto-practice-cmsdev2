@@ -1,0 +1,15 @@
+<!--
+  templateType: section
+  label: Team
+  isAvailableForNewContent: true
+  description: "Team members section"
+-->
+{% dnd_section background_color={{ context.background_color or "#f8fafc" }}, vertical_alignment="MIDDLE" %}    
+    {% Team name %}
+    {% dnd_module path="@hubspot/rich_text" html={{ context.content or "<h1>Team</h1>" }} %}
+    {% end_dnd_module %}
+    
+    {# Team members #}
+    {% dnd_module path="../modules/team-member"  %}
+    {% end_dnd_module %}
+{% end_dnd_section %}
