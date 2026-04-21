@@ -3,7 +3,6 @@
 {% for member in module.members %}
   {% set photo=member.member_photo.src or get_asset_url("../images/member.png") %}
   <div class="team-member span3 tablet-span6 mobile-span12">
-    <h2>{{ member.member_name|sanitize_html }}</h2>
     <img class="team-image" alt="{{ member.member_photo.alt or member.member_name}}" 
       src="{{ photo }}"
       srcset="{{ resize_image_url(photo, 400) }} 400w,
@@ -13,9 +12,14 @@
       sizes="(min-width: 1024px) 25vw, 
             (min-width: 768px) 50vw, 
             100vw">
-    {% if member.position %}
-      {{ member.position|sanitize_html }}
+    <h2>{{ member.member_name|sanitize_html }}</h2>
+    {% if member.member_position %}
+      <p class="member-position">{{ member.member_position|sanitize_html }}</p>
     {% endif %}
   </div>
 {% endfor %}
 </div>
+
+{% require_css %}
+<link rel="stylesheet" href="{{ get_asset_url('./module.css') }}">
+{% end_require_css %}
