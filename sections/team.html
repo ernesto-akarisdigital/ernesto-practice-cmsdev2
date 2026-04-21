@@ -4,11 +4,11 @@
   isAvailableForNewContent: true
   description: "Team members section"
 -->
-{% dnd_section background_color={{ context.background_color or "#f8fafc" }}, vertical_alignment="MIDDLE" %}
+{% dnd_section background_color={{ theme.global_colors.primary_color }}, vertical_alignment="MIDDLE" %}
     {% dnd_column %}
         {# Team name #}
         {% dnd_row%}
-            {% dnd_module path="@hubspot/rich_text" html={{ context.content or "<h1>Team</h1>" }} %}
+            {% dnd_module path="@hubspot/rich_text" html={{ context.content || "<h1>Team</h1>" }} %}
             {% end_dnd_module %}
         {% end_dnd_row %}
         

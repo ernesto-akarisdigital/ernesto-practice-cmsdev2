@@ -14,7 +14,7 @@
             100vw">
     <h2>{{ member.member_name|sanitize_html }}</h2>
     {% if member.member_position %}
-      <p class="member-position">{{ member.member_position|sanitize_html }}</p>
+      <p>{{ member.member_position|sanitize_html }}</p>
     {% endif %}
   </div>
 {% endfor %}
@@ -22,4 +22,21 @@
 
 {% require_css %}
 <link rel="stylesheet" href="{{ get_asset_url('./module.css') }}">
+
+<style>
+  {% scope_css %}
+  .team-member {
+    background-color: {{ module.colors.background.color }};
+  }
+  .team-image {
+    background-color: {{ module.colors.image_background.color }};
+  }
+  .team-member h2 {
+    color: {{ module.colors.member_name.color }};
+  }
+  .team-member p{
+    color: {{ module.colors.position.color }};
+  }
+  {% end_scope_css %}
+</style>
 {% end_require_css %}

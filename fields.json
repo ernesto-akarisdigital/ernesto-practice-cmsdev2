@@ -10,36 +10,40 @@
         "type": "color",
         "alternate_names": ["primary_color"],
         "visibility": {
-          "hidden_subfields": {
-            "opacity": true
-          }
+          "hidden_subfields": {"opacity": true}
         },
         "inherited_value": {
-          "property_value_paths": {
-            "color": "brand_settings.primaryColor"
-          }
+          "property_value_paths": {"color": "brand_settings.primaryColor"}
         },
-        "default": {
-          "color": "#494A52"
-        }
+        "default": {"color": "#494A52"}
       },
       {
         "label": "Secondary",
         "name": "secondary",
         "type": "color",
         "alternate_names": ["secondary_color"],
-        "visibility": {
-          "hidden_subfields": {
-            "opacity": true
-          }
-        },
+        "visibility": {"hidden_subfields": {"opacity": true}},
         "inherited_value": {
-          "property_value_paths": {
-            "color": "brand_settings.colors[1]"
-          }
+          "property_value_paths": {"color": "brand_settings.colors[1]"}
         },
-        "default": {
-          "color": "#F8FAFC"
+        "default": {"color": "#F8FAFC"}
+      },
+      {
+        "label": "Header background",
+        "name": "header_background_color",
+        "type": "color",
+        "visibility": {"hidden_subfields": {"opacity": true}},
+        "inherited_value": {
+          "property_value_paths": {"color": "brand_settings.colors[1]"}
+        }
+      },
+      {
+        "label": "Footer background",
+        "name": "footer_background_color",
+        "type": "color",
+        "visibility": {"hidden_subfields": {"opacity": true}},
+        "inherited_value": {
+          "property_value_paths": {"color": "brand_settings.colors[1]"}
         }
       }
     ]

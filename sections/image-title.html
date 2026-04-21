@@ -4,13 +4,13 @@
   isAvailableForNewContent: true
   description: "Image at left and title at right"
 -->
-{% dnd_section background_color={{ context.background_color or "#f8fafc" }}, vertical_alignment="MIDDLE" %}
+{% dnd_section background_color={{ context.background_color || "#f8fafc" }}, vertical_alignment="MIDDLE" %}
 
   {# IMAGE#}
   {% dnd_column width=4 %}
     {% dnd_row %}
         {% dnd_module path="@hubspot/linked_image" width=4
-          img={ "alt": context.image_alt or "", "src": context.image, "size_type": "auto" } %}
+          img={ "alt": context.image_alt or "", "src": context.image || get_asset_url("../images/large-placeholder-image.png"), "size_type": "auto" } %}
         {% end_dnd_module %}
     {% end_dnd_row %}
   {% end_dnd_column %}

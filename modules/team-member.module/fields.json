@@ -23,5 +23,56 @@
         "type": "image"
       }
     ]
+  },
+  {
+    "label": "Colors",
+    "name": "colors",
+    "type": "group",
+    "children": [
+      {
+        "label": "Background",
+        "name": "background",
+        "type": "color",
+        "visibility": {
+          "hidden_subfields": {"opacity": true}
+        },
+        "inherited_value": {
+          "property_value_paths": {"color": "theme.global_colors.secondary.color"}
+        }
+      },
+      {
+        "label": "Image background",
+        "name": "image_background",
+        "type": "color",
+        "visibility": {
+          "hidden_subfields": {"opacity": true}
+        },
+        "inherited_value": {
+          "property_value_paths": {"color": "theme.global_colors.primary.color"}
+        }
+      },
+      {
+        "label": "Name",
+        "name": "member_name",
+        "type": "color",
+        "visibility": {
+          "hidden_subfields": {"opacity": true}
+        },
+        "inherited_value": {
+          "property_value_paths": {"color": "theme.global_colors.primary.color"}
+        }
+      },
+      {
+        "label": "Position",
+        "name": "position",
+        "type": "color",
+        "visibility": {
+          "hidden_subfields": {"opacity": true}
+        },
+        "inherited_value": {
+          "property_value_paths": {"color": "theme.global_colors.secondary.color"}
+        }
+      }
+    ]
   }
 ]

@@ -1,0 +1,7 @@
+header {
+  background-color: {{ theme.global_colors.header_background_color.color }};
+}
+
+footer {
+  background-color: {{ theme.global_colors.footer_background_color.color }};
+}
