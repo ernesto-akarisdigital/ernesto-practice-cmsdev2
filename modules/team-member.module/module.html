@@ -1,9 +1,12 @@
 <!-- Team member  -->
-<h1>Team member</h1>
-<img src="{{ module.image.src }}" alt="{{ module.image.alt }}" class="team-image">
-<div class="team-info">
-    {{ module.name|sanitize_html }}
-    {% if module.position %}
-    {{ module.position|sanitize_html }}
+<div class="team-members">
+{% for member in module.members %}
+  <div class="team-member">
+    <h2>{{ member.member_name|sanitize_html }}</h2>
+    <img src="{{ module.image.src }}" alt="{{ module.image.alt }}" class="team-image">
+    {% if member.position %}
+      {{ member.position|sanitize_html }}
     {% endif %}
+  </div>
+{% endfor %}
 </div>

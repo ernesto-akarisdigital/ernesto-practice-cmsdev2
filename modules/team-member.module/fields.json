@@ -1,19 +1,27 @@
 [
   {
-    "label": "Name",
-    "name": "name",
-    "type": "richtext",
-    "default":"Member name"
-  },
-  {
-    "label": "Position",
-    "name": "position",
-    "type": "richtext",
-    "default":"Member position"
-  },
-  {
-    "label": "Image",
-    "name": "image",
-    "type": "image"
+    "name":"members",
+    "label":"Member",
+    "type":"group",
+    "occurrence": { "min": 1},
+    "children":[
+      {
+        "label": "Name",
+        "name": "member_name",
+        "type": "text",
+        "default":"Name Lastname"
+      },
+      {
+        "label": "Position",
+        "name": "member_position",
+        "type": "text",
+        "default":"CEO"
+      },
+      {
+        "label": "Photo",
+        "name": "member_photo",
+        "type": "image"
+      }
+    ]
   }
 ]

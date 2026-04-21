@@ -1,10 +1,10 @@
 {
-  "label": "Team member",
+  "label": "Team members",
   "css_assets": [],
   "external_js": [],
   "global": false,
   "help_text": "",
-  "content_types": ["PAGE"],
+  "content_types": ["ANY"],
   "js_assets": [],
   "other_assets": [],
   "smart_type": "NOT_SMART",
