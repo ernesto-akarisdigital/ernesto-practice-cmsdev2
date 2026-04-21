@@ -4,8 +4,18 @@
   isAvailableForNewContent: true
   description: "Team members section"
 -->
-{% dnd_section background_color={{ context.background_color or "#f8fafc" }}, vertical_alignment="MIDDLE" %}    
-    {# Team name #}
-    {% dnd_module path="@hubspot/rich_text" html={{ context.content or "<h1>Team</h1>" }} %}
-    {% end_dnd_module %}
+{% dnd_section background_color={{ context.background_color or "#f8fafc" }}, vertical_alignment="MIDDLE" %}
+    {% dnd_column %}
+        {# Team name #}
+        {% dnd_row%}
+            {% dnd_module path="@hubspot/rich_text" html={{ context.content or "<h1>Team</h1>" }} %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+        
+        {# Team member #}
+        {% dnd_row%}
+            {% dnd_module path="../modules/team-member.module" %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+    {% end_dnd_column %}
 {% end_dnd_section %}
