@@ -2,6 +2,7 @@
 <div class="team-members row-fluid">
 {% for member in module.members %}
   {% set photo=member.member_photo.src or get_asset_url("../images/member.png") %}
+  {% set loadingAttr = 'loading="{{ member.member_photo.loading or 'lazy' }}" %}
   <div class="team-member span3 tablet-span6 mobile-span12">
     <img class="team-image" alt="{{ member.member_photo.alt or member.member_name}}" 
       src="{{ photo }}"
@@ -11,7 +12,7 @@
             {{ resize_image_url(photo, 1000) }} 1000w"
       sizes="(min-width: 1024px) 25vw, 
             (min-width: 768px) 50vw, 
-            100vw">
+            100vw" {{ loadingAttr }}>
     <h2>{{ member.member_name|sanitize_html }}</h2>
     {% if member.member_position %}
       <p>{{ member.member_position|sanitize_html }}</p>

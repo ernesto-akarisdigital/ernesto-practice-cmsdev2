@@ -10,7 +10,7 @@
   {% dnd_column width=4 %}
     {% dnd_row %}
         {% dnd_module path="@hubspot/linked_image" width=4
-          img={ "alt": context.image_alt or "", "src": context.image || get_asset_url("../images/large-placeholder-image.png"), "size_type": "auto" } %}
+          img={ "alt": context.image_alt or "", "src": context.image || brand_settings.primary_logo.src, "size_type": "auto" } %}
         {% end_dnd_module %}
     {% end_dnd_row %}
   {% end_dnd_column %}
