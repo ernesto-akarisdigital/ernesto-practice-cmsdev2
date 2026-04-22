@@ -5,3 +5,21 @@ header {
 footer {
   background-color: {{ theme.global_colors.footer_background_color.color }};
 }
+
+h1, h2, h3, h4, h5, h6{
+  color: {{ theme.global_colors.primary.color }} !important;
+}
+
+.logo-company-name{
+  color: {{ theme.global_colors.menu_text_color.color }} !important;
+}
+span{
+  color: {{ theme.global_colors.menu_text_color.color }};
+}
+.hs-search-field__label {
+  color: {{ theme.global_colors.menu_text_color.color }};
+}
+
+.social-links {
+  padding-top: 10px;
+}

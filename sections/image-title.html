@@ -4,7 +4,7 @@
   isAvailableForNewContent: true
   description: "Image at left and title at right"
 -->
-{% dnd_section background_color={{ context.background_color || "#f8fafc" }}, vertical_alignment="MIDDLE" %}
+{% dnd_section background_color={{ context.background_color || theme.global_colors.background_color.color }}, vertical_alignment="MIDDLE" %}
 
   {# IMAGE#}
   {% dnd_column width=4 %}

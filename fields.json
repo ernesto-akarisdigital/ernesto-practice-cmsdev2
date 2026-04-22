@@ -45,6 +45,18 @@
         "inherited_value": {
           "property_value_paths": {"color": "brand_settings.colors[1]"}
         }
+      },
+      {
+        "label": "Menu text",
+        "name": "menu_text_color",
+        "type": "color",
+        "visibility": {"hidden_subfields": {"opacity": true}}
+      },
+      {
+        "label": "Background",
+        "name": "background_color",
+        "type": "color",
+        "visibility": {"hidden_subfields": {"opacity": true}}
       }
     ]
   },
